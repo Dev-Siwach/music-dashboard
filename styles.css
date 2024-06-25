@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Indie+Flower&display=swap");
+
+.bakbak-one-regular {
+  font-family: "Bakbak One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+div {
+  background-color: #000000;
+  border: 0px;
+  border-radius: 10px;
+}
+
+body {
+  background-color: #ffffff;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  max-height: 100vh;
+  max-width: 100vw;
+  gap: 3px;
+}
+
+#sidebar {
+  margin-top: 0px;
+  grid-row: 2 / 3;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#topbar {
+  grid-area: 1/2/2/3;
+}
+
+#page {
+  grid-area: 2/2/3/3;
+}
+
+#bottom-bar {
+  grid-area: 3/1/3/4;
+}
+li {
+  list-style: none;
+}
+
+#logo {
+  grid-area: 1/1/2/2;
+  font-family: "Bakbak One", serif;
+  font-size: 48px;
+  padding: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: -5px;
+}
+
+#navigation {
+  flex: 2;
+  display: flex;
+}
+
+#navigation > ul,
+#user-bar > ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#navigation > ul > li,
+#user-bar > ul > li {
+  transition: all 250ms;
+}
+#navigation > ul > li:hover,
+#user-bar > ul > li:hover {
+  transform: scale(1.2);
+  border-bottom: 1px solid white;
+}
+
+#topbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 3rem;
+}
+
+#page-navigation > button {
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  height: 2rem;
+  width: 2rem;
+  transition: all 250ms;
+}
+
+#page-navigation > button:hover {
+  transform: scale(1.2);
+}
+
+#sign-in-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 3rem;
+}
+
+#sign-up {
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+}
+
+#sign-in {
+  border: 0px;
+  border-radius: 10px;
+  background-color: #aff4c6;
+  height: 3rem;
+  width: 8rem;
+}
+
+#sign-in:hover {
+  transform: scale(1.2);
+  box-shadow: #aff4c6 0px 0px 5px;
+}
+
+#sign-up:hover {
+  transform: scale(1.2);
+}
+
+#sign-in,
+#sign-up {
+  font-size: 20px;
+  font-weight: bold;
+  word-spacing: 0.2rem;
+  transition: all 250ms;
+}
+
+#bottom-bar {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+#current-song-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+#player-controls {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#progress-area {
+  background-color: white;
+  width: 77rem;
+  height: 3px;
+}
+
+#song-timer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#song-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#song-control > button {
+  border: 0px;
+  background-color: transparent;
+  height: 3rem;
+  width: 3rem;
+}
+
+#secondary-player-control {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#secondary-player-control > button {
+  border: 0px;
+  background-color: transparent;
+  height: 2rem;
+  width: 2rem;
+}
+
+#volume-bar-base {
+  background-color: white;
+  width: 10rem;
+  height: 3px;
+}
